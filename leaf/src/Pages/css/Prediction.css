@@ -1,0 +1,71 @@
+/* .PredictionPage{
+    display: flex;
+} */
+.Portion1{
+    display: flex;
+}
+.FormWrapper{
+    background-color: aliceblue;
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+}
+.FormWrapper>input{
+    background-color: black;
+}
+button, .RemoveButton{
+    margin-top: 10px;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.RemoveButton{
+    background-color: rebeccapurple;
+}
+.SubmitButton:hover{
+    color: white;
+    background-color: rgb(31, 171, 136);
+}
+.UploadDetailWrapper{
+    background-color: aliceblue;
+    color: black;
+    width: 50%;
+    margin-top: 50px;
+    border-radius: 10px;;
+    padding: 20px;
+    margin-left: 10px;
+}
+.UploadHeader{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.test{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    background-color: aliceblue;
+    color: black;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.ResultText{
+    font-weight: 500;
+    text-transform: uppercase;
+}
