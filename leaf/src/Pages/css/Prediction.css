@@ -17,9 +17,15 @@
 .FormWrapper>input{
     background-color: black;
 }
-button, .RemoveButton{
+.UploadButtonWrapper{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+button{
     margin-top: 10px;
-    width: fit-content;
+    height: fit-content;
     padding: 10px 15px;
     border-radius: 10px;
     border: none;
@@ -30,7 +36,12 @@ button, .RemoveButton{
     font-weight: 500;
 }
 .RemoveButton{
-    background-color: rebeccapurple;
+    margin-top: 10px;
+    color: orangered;
+    font-size: 30px;
+    cursor: pointer;
+
+
 }
 .SubmitButton:hover{
     color: white;
@@ -68,4 +79,10 @@ button, .RemoveButton{
 .ResultText{
     font-weight: 500;
     text-transform: uppercase;
+}
+.UploadImage {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
 }

@@ -19,10 +19,10 @@
     visibility: hidden;
     font-size: 25px;
 }
-a:hover:has(.sym) .sym{
+
+a.active:has(.sym) .sym{
     visibility: visible;
 }
-a:hover {
-    color:rgb(31, 171, 136);;
-    
+a.active{
+    color:rgb(31, 171, 136);
 }

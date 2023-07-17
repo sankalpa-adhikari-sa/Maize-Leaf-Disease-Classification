@@ -26,7 +26,7 @@ def make_prediction (image_path,model):
     predicted_class_label = class_labels[predicted_class]
     predicted_probs = np.max(prediction, axis=1)
     
-    return (predicted_class_label)
+    return (predicted_class_label,predicted_probs)
 # Create your views here.
 class LeafDiseaseDetection(viewsets.ModelViewSet):
     serializer_class= DetectionSerializers
@@ -37,10 +37,11 @@ class LeafDiseaseDetection(viewsets.ModelViewSet):
         image= request.FILES['image']
         model= load_model('static/my_model.h5')
 
-        predicted_class= make_prediction(image,model)
+        predicted_class,predicted_probs= make_prediction(image,model)
         prediction= Detection.objects.create(
             image= image,
-            predicted_class=predicted_class
+            predicted_class=predicted_class,
+            predicted_probs=round(predicted_probs[0]*100 , 2)
         )
         serializer= self.get_serializer(prediction)
         return Response(serializer.data)
