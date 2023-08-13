@@ -7,6 +7,8 @@
     justify-content: space-around;
     border-radius: 15px;
     text-transform: uppercase;
+    margin-left: 10px;
+    margin-right:10px;
 }
 .NavbarWrapper>a{
     text-decoration: none;

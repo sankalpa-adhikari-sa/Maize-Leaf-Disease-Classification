@@ -15,8 +15,6 @@ function Prediction() {
     const imageurl= URL.createObjectURL(event.target.files[0])
     setFile(selectedFile);
     setImageURL(imageurl)
-
-    
     console.log(file)
     console.log("url",imageURL)
   };
@@ -36,7 +34,7 @@ function Prediction() {
       console.log(file)
       const formData = new FormData();
       formData.append('image', file);
-      axios.post('http://127.0.0.1:8000/predict/', formData)
+      axios.post('http://127.0.0.1:5000/predict/', formData)
       .then(response => {
         console.log(response.data)
         setIsLoading(false);

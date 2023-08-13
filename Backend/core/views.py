@@ -22,7 +22,7 @@ def make_prediction (image_path,model):
 
     prediction= model.predict(image)
     predicted_class = tf.argmax(prediction, axis=1)[0]
-    class_labels = ["Rust", "Blight", "healthy"]
+    class_labels = ["Blight", "Rust", "healthy"]
     predicted_class_label = class_labels[predicted_class]
     predicted_probs = np.max(prediction, axis=1)
     

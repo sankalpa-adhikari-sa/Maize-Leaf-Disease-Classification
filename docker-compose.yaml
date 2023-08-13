@@ -1,0 +1,21 @@
+version: '1.0'
+services:
+  frontend:
+      build: 
+        context: ./leaf
+      ports:
+        - '5173:5173'
+      volumes:
+      - ./leaf:/app/frontend
+      - /app/frontend/node_modules
+  backend:
+      build:
+        context: ./backend
+      ports:
+        - '5000:5000'
+      volumes:
+        - ./backend:/app/backend
+      environment:
+        - SECRET_KEY=django-insecure-y8hkji%5&55n5*^r(xox32nurqh8@*1e7wc9yz=ehl@^#!-@)d
+        - DEBUG=True
+    
