@@ -68,7 +68,7 @@ http://localhost:5173
 ```
 - Backend
 ```bash
-http://localhost:8000
+http://localhost:5000
 ```
 ## Demo
 
